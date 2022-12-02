@@ -38,7 +38,7 @@ public class DemoTask extends ForkJoinTask<String> {
             e.printStackTrace();
         }
         setRawResult("levi");
-        quietlyComplete();
-        return false;
+//        quietlyComplete();
+        return true;
     }
 }

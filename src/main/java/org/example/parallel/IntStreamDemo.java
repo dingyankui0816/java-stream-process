@@ -10,7 +10,10 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
- * @Description todo
+ * @Description parallel stream
+ *  todo
+ *
+ *  https://www.processon.com/view/link/638f1f1f1e08536bffaabb0e
  * @Author: Levi.Ding
  * @Date: 2022/11/29 16:02
  * @Version V1.0
@@ -20,7 +23,10 @@ public class IntStreamDemo {
 
 
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3));
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 31; i++) {
+            list.add(i);
+        }
         Stream<Integer> integerStream = list.parallelStream().map(i -> i + 1).skip(2).filter(i -> i > 2);
 
         int sum = integerStream.collect(Collectors.summingInt(Integer::intValue));

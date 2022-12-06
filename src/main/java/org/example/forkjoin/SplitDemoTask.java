@@ -61,7 +61,7 @@ public class SplitDemoTask extends ForkJoinTask<String> {
         log.info("逻辑处理,{}",i);
         TimeUnit.SECONDS.sleep(2);
         if (leftFork!=null){
-            String expat = leftFork.get().toString();
+            String expat = leftFork.join().toString();
             String reference = resultSync.getReference();
             expat = reference+ expat + ",";
             if (!resultSync.weakCompareAndSet(reference,expat,0,0)){

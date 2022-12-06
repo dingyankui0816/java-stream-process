@@ -16,6 +16,7 @@ import java.util.concurrent.ForkJoinTask;
  *      * first priority to processing tasks from their own queues (LIFO
  *      * or FIFO, depending on mode), then to randomized FIFO steals of
  *      * tasks in other queues.
+ * {@see org.example.forkjoin.Demo}
  *
  *
  * 分治
@@ -24,6 +25,7 @@ import java.util.concurrent.ForkJoinTask;
  * {@link ArrayList.ArrayListSpliterator#trySplit()}
  * 切分后通过 {@link AbstractTask#fork()} 将任务加入到 {@link java.util.concurrent.ForkJoinPool} 中
  * {@see AbstractTask}
+ * {@see org.example.forkjoin.SplitDemo} SplitDemo 是一个分治的例子
  *
  *
  * @Author: Levi.Ding
